@@ -1,14 +1,14 @@
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "hostRequirements": {
-    "cpus": 4
+    "cpus": 2
   },
   "waitFor": "onCreateCommand",
   "updateContentCommand": "python3 -m pip install -r requirements.txt",
   "postCreateCommand": "",
   "customizations": {
     "codespaces": {
-      "openFiles": []
+      "openFiles": ["README.md"]
     },
     "vscode": {
       "extensions": [
@@ -16,5 +16,8 @@
         "ms-python.python"
       ]
     }
+  },
+  "remoteEnv": {
+    "PATH": "${containerEnv:PATH}:/opt/python/3.10.8/bin"
   }
 }
